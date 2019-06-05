@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "grpc-tools": "^1.7.3",
+    "grpc_tools_node_protoc_ts": "^2.5.3",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
+  },
+  "dependencies": {
+    "google-protobuf": "^3.8.0",
+    "grpc": "^1.21.1"
+  }
+}

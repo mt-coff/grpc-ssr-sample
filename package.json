@@ -1,0 +1,16 @@
+{
+  "name": "grpc-ssr-sample",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "ssh://git@github.com/mt-coff/grpc-ssr-sample.git",
+  "author": "mt-coff <mt.coff.00@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "gen-proto": "./script/protogen.sh",
+    "run:server": "ts-node --project server/tsconfig.json server/index.ts"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ]
+}
