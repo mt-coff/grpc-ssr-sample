@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "gen-proto": "./script/protogen.sh",
-    "run:server": "ts-node --project server/tsconfig.json server/index.ts"
+    "start:server": "ts-node --project server/tsconfig.json server/index.ts"
   },
   "workspaces": [
     "server",

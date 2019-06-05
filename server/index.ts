@@ -8,7 +8,8 @@ class ServerImpl implements IGreeterServer {
     callback: grpc.sendUnaryData<HelloReply>
   ) {
     const reply = new HelloReply();
-    reply.setMessage(`こんにちは ${call.request.getName}`);
+    console.debug(call.request.getName());
+    reply.setMessage(`こんにちは ${call.request.getName()}`);
     callback(null, reply);
   }
 }
@@ -16,8 +17,9 @@ class ServerImpl implements IGreeterServer {
 function main() {
   const server = new grpc.Server();
   server.addService(GreeterService, new ServerImpl());
-  server.bind("0.0.0.0:50051", grpc.ServerCredentials.createInsecure);
+  server.bind("0.0.0.0:50051", grpc.ServerCredentials.createInsecure());
   server.start();
+  console.info("Server started, listening: localhost:50051");
 }
 
 main();
