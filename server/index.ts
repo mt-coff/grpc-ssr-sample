@@ -8,7 +8,6 @@ class ServerImpl implements IGreeterServer {
     callback: grpc.sendUnaryData<HelloReply>
   ) {
     const reply = new HelloReply();
-    console.debug(call.request.getName());
     reply.setMessage(`こんにちは ${call.request.getName()}`);
     callback(null, reply);
   }

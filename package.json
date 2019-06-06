@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "gen-proto": "./script/protogen.sh",
-    "start:server": "ts-node --project server/tsconfig.json server/index.ts"
+    "start:server": "ts-node --project server/tsconfig.json server/index.ts",
+    "start:client": "./script/client.sh",
+    "start": "yarn start:server & yarn start:client"
   },
   "workspaces": [
     "server",
